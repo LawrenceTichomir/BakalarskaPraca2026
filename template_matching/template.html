@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OCR Template Matching Lab</title>
+    <link rel="stylesheet" href="style_temp.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../template_matching/template.html">Template</a>
+            <a href="../histogram/histogram.html">Histogram</a>
+            <a href="../zoning/zoning.html">Zoning</a>
+            <a href="../compare/compare.html">Compare</a>
+            <a href="../manager/templates_manager.html">Manager</a>
+        </div>
+    </nav>
+    <main class="wrap">
+        <h1>Template Matching</h1>
+
+        <section class="row">
+            <div class="panel">
+                <h2>Draw input</h2>
+                <canvas id="draw" width="160" height="160"></canvas>
+                <div class="btns">
+                    <button id="clearBtn">Clear</button>
+                    <div class="controls">
+                        <label>
+                            Brush size: <span id="brushVal">7</span>
+                            <input id="brushSize" type="range" min="4" max="18" value="7" />
+                        </label>
+
+                        <label>
+                            Threshold: <span id="thrVal">40</span>
+                            <input id="thr" type="range" min="0" max="90" value="40" />
+                        </label>
+
+                        <label>
+                            Margin: <span id="marginVal">10</span>
+                            <input id="margin" type="range" min="0" max="12" value="10" />
+                        </label>
+                    </div>
+
+                </div>
+                <div class="btns">
+
+                    <select id="saveDigit" aria-label="Digit to save">
+                        <option value="0">Save as 0</option>
+                        <option value="1">Save as 1</option>
+                        <option value="2">Save as 2</option>
+                        <option value="3">Save as 3</option>
+                        <option value="4">Save as 4</option>
+                        <option value="5">Save as 5</option>
+                        <option value="6">Save as 6</option>
+                        <option value="7">Save as 7</option>
+                        <option value="8">Save as 8</option>
+                        <option value="9">Save as 9</option>
+                    </select>
+
+                    <button id="saveTemplateBtn">Save template</button>
+                    <button id="clearUserTemplatesBtn">Clear my templates</button>
+                    <button id="exportTemplatesBtn">Export templates</button>
+                    <button id="importTemplatesBtn">Import templates</button>
+                    <input id="importFile" type="file" accept="application/json" hidden />
+                </div>
+
+            </div>
+
+            <div class="viewer">
+
+                <canvas id="stageView" width="80" height="80"></canvas>
+
+                <div class="viewerControls">
+                    <button id="prevStage">Prev</button>
+                    <div class="stageMeta">
+                        <div id="stageName" class="stageName">—</div>
+                        <div id="stageInfo" class="stageInfo">—</div>
+                    </div>
+                    <button id="nextStage">Next</button>
+                </div>
+
+                <div class="viewerSmall">
+                    <div>
+                        <div class="label">28 X 28 preview</div>
+                        <canvas id="preview" width="140" height="140"></canvas>
+                    </div>
+
+                    <div>
+                        <div class="label">Result</div>
+                        <div id="result" class="result">—</div>
+                        <div class="label">Top scores</div>
+                        <ul id="scores"></ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="app_temp.js"></script>
+    <script src="../navbar.js"></script>
+</body>
+
+</html>

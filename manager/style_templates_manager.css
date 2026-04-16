@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+.topbar .btn {
+  background: #222;
+  color: white;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.topbar .btn:hover {
+  background: #333;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 24px;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+button {
+  background: #2a3246;
+  color: #e8e8e8;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.summary {
+  opacity: 0.75;
+  margin-bottom: 18px;
+}
+
+.templatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #151922;
+  border: 1px solid #232a3a;
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.digitBadge {
+  font-size: 14px;
+  font-weight: 700;
+  background: #222a3a;
+  border: 1px solid #2f3950;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.meta {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.templateCanvas {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: black;
+  border: 1px solid #2a3246;
+  border-radius: 8px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.deleteBtn {
+  background: #5a2230;
+}
+
+.deleteBtn:hover {
+  filter: brightness(1.08);
+}
+
+.emptyState {
+  opacity: 0.7;
+  padding: 16px 0;
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCR Template Manager</title>
+  <link rel="stylesheet" href="style_templates_manager.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <h1>OCR Template Manager</h1>
+
+    <div class="topbar">
+      <a href="../index.html" class="btn">Home</a>
+      <button id="reloadBtn">Reload</button>
+      <button id="exportBtn">Export current templates</button>
+      <button id="clearAllBtn">Delete all user templates</button>
+    </div>
+
+    <p id="summary" class="summary">Loading...</p>
+
+    <section id="templatesGrid" class="templatesGrid"></section>
+  </main>
+
+  <script src="app_templates_manager.js"></script>
+</body>
+
+</html>
